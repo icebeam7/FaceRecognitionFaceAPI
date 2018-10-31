@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FaceRecognitionFaceAPI.Pages.FacePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="lblResultado" Text="Resultado" LineBreakMode="WordWrap" FontSize="Medium" HeightRequest="100" Margin="5" TextColor="Blue" FontAttributes="Bold"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="Nombre del grupo" VerticalOptions="Center"/>
+                <Entry Grid.Row="1" Grid.Column="1" x:Name="txtNombreGrupo" Placeholder="Grupo" WidthRequest="150"/>
+                <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnGroup" Text="Crear grupo" Clicked="btnGroup_Clicked" />
+
+                <Label Grid.Row="3" Grid.Column="0" Text="Nombre de la persona" VerticalOptions="Center" />
+                <Entry Grid.Row="3" Grid.Column="1" x:Name="txtNombrePersona" Placeholder="Persona" WidthRequest="150"/>
+                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="btnAgregar" Text="Agregar persona" Clicked="btnAgregar_Clicked"/>
+
+                <Button Grid.Row="5" Grid.Column="0" x:Name="btnCamara" x:Id="btnCamara" Text="Cámara" Clicked="btnFoto_Clicked" />
+                <Button Grid.Row="5" Grid.Column="1" x:Name="btnGaleria" x:Id="btnGaleria" Text="Galería" Clicked="btnFoto_Clicked" />
+                <Image Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" x:Name="imgFoto" WidthRequest="150" HeightRequest="150" Aspect="AspectFit"/>
+
+                <Button Grid.Row="7" Grid.Column="0" x:Name="btnObtenerInfo" Text="Obtener información" Clicked="btnObtenerInfo_Clicked" />
+                <Button Grid.Row="7" Grid.Column="1" x:Name="btnRegistrar" Text="Registrar" Clicked="btnRegistrar_Clicked" />
+
+                <Button Grid.Row="8" Grid.Column="0" x:Name="btnEntrenar" Text="Entrenar" Clicked="btnEntrenar_Clicked" />
+                <Button Grid.Row="8" Grid.Column="1" x:Name="btnIdentificar" Text="Verificar" Clicked="btnIdentificar_Clicked" />
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

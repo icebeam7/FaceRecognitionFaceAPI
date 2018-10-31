@@ -13,7 +13,7 @@ namespace FaceRecognitionFaceAPI
         {
             InitializeComponent();
 
-            MainPage = new FaceRecognitionFaceAPI.MainPage();
+            MainPage = new FaceRecognitionFaceAPI.Pages.FacePage();
         }
 
         protected override void OnStart()
